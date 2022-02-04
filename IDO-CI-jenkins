@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                // Get some code from a GitHub repository
+                // GitHub repository
                 git 'https://github.com/idomosh13/api-testing-with-node'
                 sh 'npm install'
             }
