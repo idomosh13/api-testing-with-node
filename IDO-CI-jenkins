@@ -24,7 +24,7 @@ pipeline {
             post {
                 success {
                     sh 'docker build . -t idomosh13/ido_api_test:${BUILD_NUMBER}'
-                    sh 'docker push idoporezky/ido_api_test:${BUILD_NUMBER}'
+                    sh 'docker push idomosh13/ido_api_test:${BUILD_NUMBER}'
                 }
             }
         }
