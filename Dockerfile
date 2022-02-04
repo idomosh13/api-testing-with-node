@@ -13,4 +13,5 @@ COPY --from=installer /app/test/ ./test
 COPY --from=installer /app/server.js ./server.js
 COPY --from=installer /app/package.json ./package.json
 
+
 CMD ["npm", "start"]
