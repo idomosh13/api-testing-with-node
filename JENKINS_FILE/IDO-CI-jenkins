@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                // Get some code from a GitHub repository
+                // GitHub repository
                 git 'https://github.com/idomosh13/api-testing-with-node'
                 sh 'npm install'
             }
@@ -24,7 +24,7 @@ pipeline {
             post {
                 success {
                     sh 'docker build . -t idomosh13/ido_api_test:${BUILD_NUMBER}'
-                    sh 'docker push idoporezky/ido_api_test:${BUILD_NUMBER}'
+                    sh 'docker push idomosh13/ido_api_test:${BUILD_NUMBER}'
                 }
             }
         }
